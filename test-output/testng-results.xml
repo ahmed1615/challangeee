@@ -2,12 +2,12 @@
 <testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-09-10T17:46:42 ART" name="Default suite" finished-at="2022-09-10T17:46:45 ART" duration-ms="2252">
+  <suite started-at="2022-09-12T10:25:07 ART" name="teladoc" finished-at="2022-09-12T10:25:09 ART" duration-ms="2332">
     <groups>
     </groups>
-    <test started-at="2022-09-10T17:46:42 ART" name="Default test" finished-at="2022-09-10T17:46:45 ART" duration-ms="2252">
+    <test started-at="2022-09-12T10:25:07 ART" name="workflow" finished-at="2022-09-12T10:25:09 ART" duration-ms="2332">
       <class name="test.DeletUser">
-        <test-method is-config="true" signature="StartDriver(java.lang.String)[pri:0, instance:test.DeletUser@25fb8912]" started-at="2022-09-10T17:46:39 ART" name="StartDriver" finished-at="2022-09-10T17:46:42 ART" duration-ms="3181" status="PASS">
+        <test-method is-config="true" signature="StartDriver(java.lang.String)[pri:0, instance:test.DeletUser@7bd4937b]" started-at="2022-09-12T10:25:02 ART" name="StartDriver" finished-at="2022-09-12T10:25:07 ART" duration-ms="4478" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -18,19 +18,19 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- StartDriver -->
-        <test-method signature="delete()[pri:1, instance:test.DeletUser@25fb8912]" started-at="2022-09-10T17:46:42 ART" name="delete" finished-at="2022-09-10T17:46:45 ART" duration-ms="2115" status="PASS">
+        <test-method signature="delete()[pri:1, instance:test.DeletUser@7bd4937b]" started-at="2022-09-12T10:25:07 ART" name="delete" finished-at="2022-09-12T10:25:09 ART" duration-ms="2146" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- delete -->
-        <test-method signature="validatedelteuser()[pri:0, instance:test.DeletUser@25fb8912]" started-at="2022-09-10T17:46:45 ART" name="validatedelteuser" finished-at="2022-09-10T17:46:45 ART" depends-on-methods="test.DeletUser.delete" duration-ms="100" status="PASS">
+        <test-method signature="validatedelteuser()[pri:0, instance:test.DeletUser@7bd4937b]" started-at="2022-09-12T10:25:09 ART" name="validatedelteuser" finished-at="2022-09-12T10:25:09 ART" depends-on-methods="test.DeletUser.delete" duration-ms="158" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validatedelteuser -->
-        <test-method is-config="true" signature="CloseTab()[pri:0, instance:test.DeletUser@25fb8912]" started-at="2022-09-10T17:46:45 ART" name="CloseTab" finished-at="2022-09-10T17:46:50 ART" duration-ms="5060" status="PASS">
+        <test-method is-config="true" signature="CloseTab()[pri:0, instance:test.DeletUser@7bd4937b]" started-at="2022-09-12T10:25:09 ART" name="CloseTab" finished-at="2022-09-12T10:25:14 ART" duration-ms="5086" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CloseTab -->
       </class> <!-- test.DeletUser -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- workflow -->
+  </suite> <!-- teladoc -->
 </testng-results>
