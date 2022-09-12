@@ -14,3 +14,6 @@ to change the browser chancge the value of browser name form <parameter name="br
 
 ### avaliable browser
 chrome - firefox -edge 
+
+###only 2 scenarios 
+AddUser &delte user 
