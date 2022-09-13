@@ -3,14 +3,16 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="test.DeletUser">
+      <class name="test.AddUserTest">
         <methods>
           <include name="CloseTab"/>
-          <include name="validatedelteuser"/>
-          <include name="delete"/>
+          <include name="assert_change"/>
+          <include name="validateNewuser"/>
+          <include name="stepOneCreatingUser"/>
+          <include name="fillform"/>
           <include name="StartDriver"/>
         </methods>
-      </class> <!-- test.DeletUser -->
+      </class> <!-- test.AddUserTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -2,7 +2,7 @@ package uti;
 
 import java.util.Random;
 
-public class GenrateData {
+public class GenrateData { 
 	public static String genrate() {
 		String chars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijk"
           +"lmnopqrstuvwxyz";

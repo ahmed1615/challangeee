@@ -1,6 +1,7 @@
 package test;
 
 import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertNotSame;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,13 +19,13 @@ public class AddUserTest extends TestBase {
 
 	TablePage table;
 	AddUserForm addData;
+	String h;
 	private int before;
-	protected int  after;
-	
-	
+	private int  after;
 	
 	@Test(priority = 1, alwaysRun = true)
 	public  void stepOneCreatingUser() {
+
 		table= new TablePage(driver);
 		String actualT=driver.getTitle();
 		assertEquals(actualT, "Protractor practice website - WebTables");
@@ -38,7 +39,7 @@ public class AddUserTest extends TestBase {
 	public void fillform() {
 		table =new TablePage(driver);
 		addData =new AddUserForm(driver);
-		addData.setUserData(GenrateData.genrate(), GenrateData.genrate(), GenrateData.genrate(), GenrateData.genrate());
+		addData.setUserData(h=GenrateData.genrate(), GenrateData.genrate(), GenrateData.genrate(), GenrateData.genrate());
 		addData.company("AAA");
 		addData.setRule("Customer");
 		addData.setEmail(GenrateData.genrate()+"@test.com");
@@ -54,9 +55,16 @@ public class AddUserTest extends TestBase {
 		assertEquals(after-1, before);
 	}
 	
-	
-	
+	@Test(dependsOnMethods = "assert_change")
+	public void validateNewuser() {
+		table =new TablePage(driver);
+			String valueoffirstdcoulm = driver.findElement(By.xpath("//tbody/tr[1]/td[1]")).getText();
+		    assertEquals(valueoffirstdcoulm, h);
+		    System.out.println(h);
+		}
 	}
+	
+	
 
 
 
