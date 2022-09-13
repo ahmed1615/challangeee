@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-09-12T10:25:07 ART" name="teladoc" finished-at="2022-09-12T10:25:09 ART" duration-ms="2332">
+  <suite started-at="2022-09-13T11:51:33 ART" name="Default suite" finished-at="2022-09-13T11:51:34 ART" duration-ms="781">
     <groups>
     </groups>
-    <test started-at="2022-09-12T10:25:07 ART" name="workflow" finished-at="2022-09-12T10:25:09 ART" duration-ms="2332">
-      <class name="test.DeletUser">
-        <test-method is-config="true" signature="StartDriver(java.lang.String)[pri:0, instance:test.DeletUser@7bd4937b]" started-at="2022-09-12T10:25:02 ART" name="StartDriver" finished-at="2022-09-12T10:25:07 ART" duration-ms="4478" status="PASS">
+    <test started-at="2022-09-13T11:51:33 ART" name="Default test" finished-at="2022-09-13T11:51:34 ART" duration-ms="781">
+      <class name="test.AddUserTest">
+        <test-method is-config="true" signature="StartDriver(java.lang.String)[pri:0, instance:test.AddUserTest@7c24b813]" started-at="2022-09-13T11:51:31 ART" name="StartDriver" finished-at="2022-09-13T11:51:33 ART" duration-ms="2596" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -18,19 +18,23 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- StartDriver -->
-        <test-method signature="delete()[pri:1, instance:test.DeletUser@7bd4937b]" started-at="2022-09-12T10:25:07 ART" name="delete" finished-at="2022-09-12T10:25:09 ART" duration-ms="2146" status="PASS">
+        <test-method signature="stepOneCreatingUser()[pri:1, instance:test.AddUserTest@7c24b813]" started-at="2022-09-13T11:51:34 ART" name="stepOneCreatingUser" finished-at="2022-09-13T11:51:34 ART" duration-ms="95" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- delete -->
-        <test-method signature="validatedelteuser()[pri:0, instance:test.DeletUser@7bd4937b]" started-at="2022-09-12T10:25:09 ART" name="validatedelteuser" finished-at="2022-09-12T10:25:09 ART" depends-on-methods="test.DeletUser.delete" duration-ms="158" status="PASS">
+        </test-method> <!-- stepOneCreatingUser -->
+        <test-method signature="fillform()[pri:0, instance:test.AddUserTest@7c24b813]" started-at="2022-09-13T11:51:34 ART" name="fillform" finished-at="2022-09-13T11:51:34 ART" depends-on-methods="test.AddUserTest.stepOneCreatingUser" duration-ms="660" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- validatedelteuser -->
-        <test-method is-config="true" signature="CloseTab()[pri:0, instance:test.DeletUser@7bd4937b]" started-at="2022-09-12T10:25:09 ART" name="CloseTab" finished-at="2022-09-12T10:25:14 ART" duration-ms="5086" status="PASS">
+        </test-method> <!-- fillform -->
+        <test-method signature="assert_change()[pri:0, instance:test.AddUserTest@7c24b813]" started-at="2022-09-13T11:51:34 ART" name="assert_change" finished-at="2022-09-13T11:51:34 ART" depends-on-methods="test.AddUserTest.fillform" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- assert_change -->
+        <test-method is-config="true" signature="CloseTab()[pri:0, instance:test.AddUserTest@7c24b813]" started-at="2022-09-13T11:51:34 ART" name="CloseTab" finished-at="2022-09-13T11:51:39 ART" duration-ms="5075" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CloseTab -->
-      </class> <!-- test.DeletUser -->
-    </test> <!-- workflow -->
-  </suite> <!-- teladoc -->
+      </class> <!-- test.AddUserTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

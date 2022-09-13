@@ -18,8 +18,8 @@ public class AddUserTest extends TestBase {
 
 	TablePage table;
 	AddUserForm addData;
-	int before;
-	int after;
+	private int before;
+	protected int  after;
 	
 	
 	
