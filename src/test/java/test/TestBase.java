@@ -42,7 +42,7 @@ public class TestBase {
 	@AfterSuite
 	public void CloseTab() throws Exception {
 		Thread.sleep(5000);
-		//driver.quit();
+		driver.quit();
 	}
 	
 }

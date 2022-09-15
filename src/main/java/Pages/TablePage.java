@@ -19,7 +19,7 @@ public class TablePage extends MainClass {
 	WebElement AddUser;
 	
 	@FindBy(xpath = "//tr[@class='smart-table-data-row ng-scope']/td[1]")
-	 public List<WebElement> columnss;
+	 public List<WebElement> firstColumn;
 	
 	@FindBy(xpath = "//tr[@class='smart-table-data-row ng-scope']")
 	public List<WebElement> Rows;
@@ -37,7 +37,7 @@ public class TablePage extends MainClass {
 	}
 	
 	public int numsofcolumn() {
-		int nusofcoulmn=columnss.size();
+		int nusofcoulmn=firstColumn.size();
 		return nusofcoulmn;
 		
 	}

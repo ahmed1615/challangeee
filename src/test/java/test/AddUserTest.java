@@ -19,7 +19,7 @@ public class AddUserTest extends TestBase {
 
 	TablePage table;
 	AddUserForm addData;
-	String h;
+	String firstName;
 	private int before;
 	private int  after;
 	
@@ -30,7 +30,7 @@ public class AddUserTest extends TestBase {
 		String actualT=driver.getTitle();
 		assertEquals(actualT, "Protractor practice website - WebTables");
 		before=table.numsofcolumn();
-		System.out.println(before);
+		System.out.println("number of rows before is "+before);
 		table.clickOnAddUser();
 		}
 		
@@ -39,14 +39,14 @@ public class AddUserTest extends TestBase {
 	public void fillform() {
 		table =new TablePage(driver);
 		addData =new AddUserForm(driver);
-		addData.setUserData(h=GenrateData.genrate(), GenrateData.genrate(), GenrateData.genrate(), GenrateData.genrate());
+		addData.setUserData(firstName=GenrateData.genrate(), GenrateData.genrate(), GenrateData.genrate(), GenrateData.genrate());
 		addData.company("AAA");
 		addData.setRule("Customer");
 		addData.setEmail(GenrateData.genrate()+"@test.com");
 		addData.setCellPhone(GenrateData.genrtaephone());
 		addData.clickonSave();
 		after=table.numsofcolumn();
-		System.out.println(after);
+		System.out.println("number of rows before is "+after);
 	 
 		
 	}
@@ -59,8 +59,8 @@ public class AddUserTest extends TestBase {
 	public void validateNewuser() {
 		table =new TablePage(driver);
 			String valueoffirstdcoulm = driver.findElement(By.xpath("//tbody/tr[1]/td[1]")).getText();
-		    assertEquals(valueoffirstdcoulm, h);
-		    System.out.println(h);
+		    assertEquals(valueoffirstdcoulm, firstName);
+		    System.out.println(firstName);
 		}
 	}
 	
