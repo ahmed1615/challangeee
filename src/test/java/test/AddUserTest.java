@@ -8,7 +8,7 @@ import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import Pages.AddUserForm;
@@ -60,7 +60,7 @@ public class AddUserTest extends TestBase {
 		table =new TablePage(driver);
 			String valueoffirstdcoulm = driver.findElement(By.xpath("//tbody/tr[1]/td[1]")).getText();
 		    assertEquals(valueoffirstdcoulm, firstName);
-		    System.out.println(firstName);
+		   
 		}
 
 	}
