@@ -1,4 +1,6 @@
 package test;
+import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertNotEquals;
 import static org.testng.Assert.assertNotSame;
 import java.util.List;
 import org.openqa.selenium.By;
@@ -45,7 +47,8 @@ public class DeletUser extends TestBase{
 		System.out.println("befoe "+ nuberofrows);
 		for(int i=0;i<nuberofrows;i++) {
 			String valueofTheardcoulm = driver.findElement(By.xpath("//tbody/tr["+(i+1)+"]/td[3]")).getText();
-			assertNotSame(valueofTheardcoulm, "novak");	
+			//assertNotSame(valueofTheardcoulm, "novak");	
+			assertNotEquals(valueofTheardcoulm, "novak");
 		}
 	}
 	

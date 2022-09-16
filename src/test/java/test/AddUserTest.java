@@ -62,6 +62,7 @@ public class AddUserTest extends TestBase {
 		    assertEquals(valueoffirstdcoulm, firstName);
 		    System.out.println(firstName);
 		}
+
 	}
 	
 	
