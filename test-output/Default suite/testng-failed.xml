@@ -9,7 +9,6 @@
           <include name="Hoverandclick"/>
           <include name="scrolldownToPersonalInfo"/>
           <include name="StartDriver"/>
-          <include name="FillInformation"/>
         </methods>
       </class> <!-- test.ScenarioTest -->
     </classes>

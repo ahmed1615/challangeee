@@ -27,7 +27,7 @@ public class MainClass {
 	}
 	
 	public static void selectvalue(WebElement element, String Value) {
-	Select select=new Select(element);
+		Select select=new Select(element);
 	select.selectByVisibleText(Value);
 	
 	}
@@ -35,14 +35,13 @@ public class MainClass {
 	public static void filladdvalue(WebElement element, String value) {
 		if(element!=null) {
 			element.click();
-			element.sendKeys("");
 			element.sendKeys(value);
 		} 
 	}
 	
 	
-	public void switchtomainpage() {
-		//driver.switchTo().defaultContent();
+	public String getattributesrc(WebElement element) {
+		return element.getAttribute("src").toString();
 	}
 }
 	

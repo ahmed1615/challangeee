@@ -11,16 +11,12 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
 import Pages.HomePage;
-import Pages.PersonalInfo;
-
 
 public class ScenarioTest extends TestBase{
 
 	public String ErrorMS= "Invalid CAPTCHA";
 	HomePage hp;
-	PersonalInfo pi;
 	Actions action;
 	JavascriptExecutor jse;
 	
@@ -36,15 +32,27 @@ public class ScenarioTest extends TestBase{
 	} 
 	@Test(dependsOnMethods = "Hoverandclick" )
 	public void scrolldownToPersonalInfo(){
+		HomePage hp = new HomePage(driver);
 		JavascriptExecutor jse = (JavascriptExecutor)driver;
-		jse.executeScript("window.scrollBy(0,4200)");
+		jse.executeScript("window.scrollBy(0,4270)");
+		//String l= hp.getatt();
+		//System.out.println(l);
+		//driver.navigate().to(l);
+		driver.switchTo().frame(0);
+		hp.fillname("Mariana");
+		hp.filllastname("Vasquez");
+		hp.fillcompanyName("claro");
+		hp.fillemail("mariana.vasquez@claro.com");
+		hp.fillnumber("+52156411584");
+		hp.fillinterstingin("MPLS");
+		jse.executeScript("window.scrollBy(0,400)");
+		hp.clickonsubmitB();
+		jse.executeScript("window.scrollBy(0,400)");
+		 Wait<WebDriver> wait = new WebDriverWait(driver, Duration.ofSeconds(6));
+		 wait.until(ExpectedConditions.visibilityOf(hp.error));
+		assertEquals(hp.error.isDisplayed(), true);
+		assertEquals(hp.error.getText().toString(), ErrorMS);
+
 	}
-	@Test(dependsOnMethods = "scrolldownToPersonalInfo" )
-	public void FillInformation() throws InterruptedException{
-		PersonalInfo pi =new PersonalInfo(driver);
-		driver.switchTo().frame("form-usclaro");
-		Thread.sleep(3000);
-		pi.fillallinPersonIformation("Mariana", "Vasquez", "claro", "mariana.vasquez@claro.com", "1122334455", "MPLS");
-		assertEquals(ErrorMS, pi.error.getText(), "error!!!!!!not match");
-	}
+
 	}
