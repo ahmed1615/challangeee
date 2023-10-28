@@ -13,7 +13,7 @@ By default, the project will default to ChromeLocal (running a local Chrome inst
 to change the browser chancge the value of browser name form <parameter name="browser" value="chrome"></parameter> into testNG.xl file 
 
 ### avaliable browser
-chrome - firefox -edge 
+chrome 
 
-###only 2 scenarios 
-AddUser &delte user 
+###only 1 scenarios 
+ScenarioTest.java 

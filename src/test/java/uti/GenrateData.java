@@ -10,7 +10,7 @@ public class GenrateData {
 		StringBuilder sb = new StringBuilder(5);
 		for (int i = 0; i < 5; i++)
 			sb.append(chars.charAt(rnd.nextInt(chars.length())));
-		return sb.toString();
+		return sb.toString(); 
 	}
 	 public static String genrtaephone() {
 	     String nums="0123456789";
