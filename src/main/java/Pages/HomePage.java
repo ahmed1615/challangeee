@@ -51,7 +51,7 @@ public class HomePage extends MainClass {
 	@FindBy(xpath   = "//p[contains(text(),'Invalid CAPTCHA')]")
 	public WebElement error;
 
-	public String getatt() {
+	public String getSourceURL() {
 		return getattributesrc(FrameId);
 	}
 	
