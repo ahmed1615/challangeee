@@ -35,9 +35,11 @@ public class ScenarioTest extends TestBase{
 		HomePage hp = new HomePage(driver);
 		JavascriptExecutor jse = (JavascriptExecutor)driver;
 		jse.executeScript("window.scrollBy(0,4270)");
-		//String l= hp.getatt();
-		//System.out.println(l);
-		//driver.navigate().to(l);
+		/* this is also for get the scr value and navigate to it
+		String SoucreURL = hp.getSourceURL();
+		System.out.println(SoucreURL);
+		driver.navigate().to(SoucreURL);
+			*/
 		driver.switchTo().frame(0);
 		hp.fillname("Mariana");
 		hp.filllastname("Vasquez");
