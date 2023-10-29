@@ -27,8 +27,7 @@ public class ScenarioTest extends TestBase{
 		Actions action = new Actions(driver);
 		action.moveToElement(hp.solution).build().perform();
 		 Wait<WebDriver> wait = new WebDriverWait(driver, Duration.ofSeconds(2));
-		 wait.until(ExpectedConditions.elementToBeClickable(hp.MPLS));
-		
+		 wait.until(ExpectedConditions.elementToBeClickable(hp.MPLS));	
 	} 
 	@Test(dependsOnMethods = "Hoverandclick" )
 	public void scrolldownToPersonalInfo(){
@@ -54,7 +53,5 @@ public class ScenarioTest extends TestBase{
 		 wait.until(ExpectedConditions.visibilityOf(hp.error));
 		assertEquals(hp.error.isDisplayed(), true);
 		assertEquals(hp.error.getText().toString(), ErrorMS);
-
 	}
-
 	}
