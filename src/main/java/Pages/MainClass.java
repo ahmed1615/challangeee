@@ -2,7 +2,6 @@ package Pages;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
@@ -20,8 +19,6 @@ public class MainClass {
 	protected WebDriver getDriver() {
         return driver;
     }
- 
-
 	public static void clickOnButton(WebElement element) {
 		element.click();
 	}
