@@ -24,8 +24,6 @@ public class HomePage extends MainClass {
 	@FindBy(xpath = "//iframe[@id='form-usclaro']")
 	public WebElement FrameId;
 	
-	
-	
 	@FindBy(xpath = "(//input[@type='text'])[1]")
 	WebElement Firstname;
 	
@@ -46,7 +44,6 @@ public class HomePage extends MainClass {
 	
 	@FindBy(className = "submit")
 	WebElement submit_B;
-	
 	
 	@FindBy(xpath   = "//p[contains(text(),'Invalid CAPTCHA')]")
 	public WebElement error;
