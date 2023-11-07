@@ -32,6 +32,7 @@ public class MainClass {
 	public static void filladdvalue(WebElement element, String value) {
 		if(element!=null) {
 			element.click();
+			element.sendKeys("");
 			element.sendKeys(value);
 		} 
 	}

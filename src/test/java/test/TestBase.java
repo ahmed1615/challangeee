@@ -1,20 +1,15 @@
 package test;
-import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.edge.EdgeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
-import org.testng.annotations.Optional;
-import org.testng.annotations.Parameters;
 
 public class TestBase {
 	public static WebDriver driver;
 	public static String user=System.getProperty("user.dir");
-	public String applink="https://www.usclaro.com/";
+	public String applink="https://www.netflix.com/";
 	
 	 
 	@BeforeSuite
@@ -25,11 +20,14 @@ public class TestBase {
 		driver=new ChromeDriver(opt); 
 		driver.get(applink);
 		driver.manage().window().maximize();
+		String title =driver.getTitle();
+		String URL =driver.getCurrentUrl().toString();
+		System.out.println("the title is "+ ">>>>>>> "+ title);
+		System.out.println("the URL is "+ ">>>>>>> "+ URL);
 	}
 	
 	@AfterSuite
 	public void CloseTab() throws Exception {
-		//driver.quit();
+		driver.quit();
 	}
-	
 }
